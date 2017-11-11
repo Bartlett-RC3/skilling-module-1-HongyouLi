@@ -29,7 +29,9 @@ public class Session_1 : MonoBehaviour {
 
     //3.b.Lists   
     public List<int> myIntegerList = new List<int>();
-    //4.Dictionaries                               
+    //4.Dictionaries     
+
+    public Dictionary<string, string> Animals = new Dictionary<string,string>();
     //2.Functions
 
     //Scope--Type--Variables--Body(instuctions)
@@ -37,21 +39,26 @@ public class Session_1 : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        Debug.Log("Hello world!!");
+
         Debug.Log("Addition Of 5 and 3 is:" + AdditionOfNumbers(5, 3));
-        //FrameRate();
+       
         myFloatArray[2] = 3.2f;
         myFloatArray[3] = 5.6f;
-        //myFloatArray[9] = 9.2f;  mistake --empty
+        //myFloatArray[9] = 9.2f;  mistake --[9] is empty
         myIntegerList.Add(1);
         myIntegerList.Add(2);
         myIntegerList.Add(3);
         //myIntegerList.Remove(0);
+
+        Animals.Add("fish","cod");
+        print("animal in fish is "+Animals["fish"]);        
     }
    
 	// Update is called once per frame
 	void Update () {
-        //Debug.Log("Hello world!!");
-		
+        
 	}
     int AdditionOfNumbers(int number1, int number2)
     {
