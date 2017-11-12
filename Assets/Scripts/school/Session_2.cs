@@ -15,6 +15,8 @@ public class Session_2 : MonoBehaviour {
     List<int> evenNumbers = new List<int> ();
     int[] evenNumbersSmart = new int[10];
 
+    List<Human> RC3tutor = new List<Human>();
+
 	// Use this for initialization
 	void Start () {
         //Variable name is equal to either 1 or 0 based on the valuse of questionTime
@@ -97,11 +99,25 @@ public class Session_2 : MonoBehaviour {
             Debug.Log("Odd Number :"+oddNumbers[i]);
 
         }
+        
+        Human Octavian = new Human(31,1.7f,70,true,"Octavian","Gheorghiu");
+        Human Tyson = new Human(34, 1.8f,80, true, "Tyson", "Hosmer");
+        Human Dave = new Human(33, 1.75f,70, true, "Dave", "Reeves");
+        RC3tutor.Add(Octavian);
+        RC3tutor.Add(Tyson);
+        RC3tutor.Add(Dave); 
+        
 
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        
+        for(int i=0 ;i< RC3tutor.Count;i++){
+        Debug.Log(RC3tutor[i].GetFirstName()+ " is RC3's tutor");
+
+        }
        
     }
 }
