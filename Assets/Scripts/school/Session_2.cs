@@ -9,9 +9,13 @@ public class Session_2 : MonoBehaviour {
 
     public int myNumber = 2;
     bool questionTime = false;
+    int myVariableQuestionTime;
 
 	// Use this for initialization
 	void Start () {
+        //Variable name is equal to either 1 or 0 based on the valuse of questionTime
+        myVariableQuestionTime = (questionTime ==true) ? 1 : 0;
+        Debug.Log("The Value of myVariableQuestionTime is: " + myVariableQuestionTime);
         
 	}
 	
