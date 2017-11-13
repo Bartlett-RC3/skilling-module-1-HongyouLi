@@ -96,7 +96,7 @@ public class Session_3 : MonoBehaviour {
 
         }
         //keyboard input
-        if(Input.GetKey(KeyCode.Space)){   ///getkey is hold  down&up 
+        if(Input.GetKey(KeyCode.Space)){   ///getkey is hold  down up 
             gameObject.transform.Rotate(new Vector3(0,5,0));
 
          }
