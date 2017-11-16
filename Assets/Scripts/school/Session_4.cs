@@ -13,17 +13,17 @@ public class Session_4 : MonoBehaviour {
         createColumnCoroutine = DropColumns();
         StartCoroutine(createColumnCoroutine);
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {   ///getkey is hold  down up 
-            StopCoroutine(createColumnCoroutine);
-
-        }
-
     }
 	
 	// Update is called once per frame
 	void Update () {
-       
+      
+        /*
+        if (Input.GetKeyDown(KeyCode.Space))
+        {   ///getkey is hold  down up 
+            StopCoroutine(createColumnCoroutine);
+
+        }*/
     }
 
 
@@ -31,7 +31,7 @@ public class Session_4 : MonoBehaviour {
     IEnumerator DropColumns() {
 
         while (true) {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(3);
             Vector3 columnPosition = new Vector3(Random.Range(-4f, 4f), Random.Range(3f, 10f), Random.Range(-4f, 4f));
             Quaternion columnRotation = new Quaternion(Random.Range(0, 90), Random.Range(0, 90), Random.Range(0, 90), 1);
             //means rotation  x y z w(means 0-1)
