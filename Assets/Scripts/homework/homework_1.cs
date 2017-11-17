@@ -10,7 +10,8 @@ public class homework_1 : MonoBehaviour {
     public float Bird = 0.1f;
     float Fish = 0.5f;
     //Declare a string variable and set a value
-    string animal = "Panda" + "Ant" + "Fish" + "Bird";
+    
+    string[] animals = { "Panda", "Ant", "Fish", "Bird" };
 
     //Declare and initialize an array
     public float[] animalArray = new float[4];
@@ -22,7 +23,7 @@ public class homework_1 : MonoBehaviour {
     
     void Start () {
         //Create a function that prints the declared variables
-         Debug.Log("Panda lives in china");
+         Debug.Log("Panda lives in china"+ animals[1] + animals[2] + animals[3] + animals[4]);
        
     }
 
