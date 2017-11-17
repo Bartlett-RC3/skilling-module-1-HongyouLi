@@ -69,7 +69,7 @@ public class Session_3 : MonoBehaviour {
         {
             if (counter <= 15)
             {////session__object_component_position
-               // gameObject.transform.Translate(Vector3.left); 
+                gameObject.transform.Translate(Vector3.left);
                 counter++;
 
             }
@@ -77,21 +77,21 @@ public class Session_3 : MonoBehaviour {
             {
                 moveLeft = false;
                 moveRight = true;
-                counter = 0;
+                counter = -15;
             }
         }
         if (moveRight == true)
         {
             if (counter <= 15)
             {////session__object_component_position
-               // gameObject.transform.Translate(Vector3.right);
+                gameObject.transform.Translate(Vector3.right);
                 counter++;
             }
             else
             {
                 moveLeft = true;
                 moveRight = false;
-                counter = 0;
+                counter = -15;
             }
 
         }
