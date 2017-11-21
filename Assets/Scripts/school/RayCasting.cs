@@ -25,11 +25,11 @@ public class RayCasting : MonoBehaviour {
         }
 
         if (Input.GetKey(KeyCode.W)) {
-            transform.Translate(Vector3.up);
+            transform.Translate(Vector3.up*0.1f);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(Vector3.down);
+            transform.Translate(Vector3.down*0.1f);
         }
     }
 }
