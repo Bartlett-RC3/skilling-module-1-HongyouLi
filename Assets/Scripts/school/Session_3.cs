@@ -5,7 +5,7 @@ using UnityEngine;
 public class Session_3 : MonoBehaviour {
 
     //Variables
-    int counter = 0;
+    int count = 0;
     public GameObject CubeReference;
     bool moveLeft = true;
     bool moveRight = false;
@@ -13,7 +13,7 @@ public class Session_3 : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Start () {     
       /*  for (int i=0;i<100;i++) {
             Vector3 CubePosition = new Vector3(i+0.5f,0,0);
             Quaternion CubeRotation = Quaternion.identity;///????
@@ -67,31 +67,31 @@ public class Session_3 : MonoBehaviour {
         ///////manually new component
         if (moveLeft == true)
         {
-            if (counter <= 15)
+            if (count <= 15)
             {////session__object_component_position
                 gameObject.transform.Translate(Vector3.left);
-                counter++;
+                count++;
 
             }
             else
             {
                 moveLeft = false;
                 moveRight = true;
-                counter = -15;
+                count = -15;
             }
         }
         if (moveRight == true)
         {
-            if (counter <= 15)
+            if (count <= 15)
             {////session__object_component_position
                 gameObject.transform.Translate(Vector3.right);
-                counter++;
+                count++;
             }
             else
             {
                 moveLeft = true;
                 moveRight = false;
-                counter = -15;
+                count = -15;
             }
 
         }
@@ -100,11 +100,11 @@ public class Session_3 : MonoBehaviour {
             gameObject.transform.Rotate(new Vector3(0,5,0));
 
          }
-        if (Input.GetMouseButton(0))  ///mouseButton 0left 1right 2middle
+        if (Input.GetMouseButton(0))  ///mouseButton, 0 left ,1 right, 2 middle
         {   ///getkey is hold  down&up 
             gameObject.transform.localScale = new Vector3(0.5f,0.5f, 0.5f);///f=float because 0.5
         }
-        if (Input.GetMouseButton(01))  ///mouseButton 0left 1right 2middle
+        if (Input.GetMouseButton(1))  ///mouseButton ,0left, 1right ,2middle
         {   ///getkey is hold  down&up 
             gameObject.transform.localScale = new Vector3(1, 1, 1);
         }

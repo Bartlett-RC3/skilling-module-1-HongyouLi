@@ -14,9 +14,9 @@ public class homework_2 : MonoBehaviour {
     List<int> catList= new List<int> ();
     int[] catListOrder= new int[10];
 
-    List<Human> RC3tutor = new List<Human>();
+    List<dog> RC3_pet = new List<dog>();
 
-//Write a dog class and initialize an instance of the class
+
 	// Use this for initialization
 	void Start () {
         //Write a function that uses a condition
@@ -47,10 +47,24 @@ public class homework_2 : MonoBehaviour {
             Debug.Log("The number of cats is " + catList[i]);
           
         }
-	}
+        //Write a dog class and initialize an instance of the class
+        dog Lucy = new dog(2,8f,true,"Lucy",true,100f,"yellow");//int _age, float _weight, bool _gender, string _name, hungery, float _energy, string _color
+        dog Max = new dog(4,10f,false,"Max",true,100f,"grey");
+        dog Rocky = new dog(5,12f,true,"Rocky",false,100f,"gold");
+        dog Buddy = new dog(8,15f,true,"Buddy",true,100f,"brown");
+        RC3_pet.Add(Lucy);
+        RC3_pet.Add(Max);
+        RC3_pet.Add(Rocky);
+        RC3_pet.Add(Buddy);
+
+
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        for (int i =0;i<RC3_pet.Count;i++) {
+            Debug.Log(RC3_pet[i].GetDogName()+" is one of pets of RC3");
+        }
 	}
 }
